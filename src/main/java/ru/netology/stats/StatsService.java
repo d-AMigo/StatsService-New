@@ -1,8 +1,6 @@
 package ru.netology.stats;
 
 public class StatsService {
-    int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-
     public int sumOfSales(int[] sales) {
         int sum = 0;
         for (int sale : sales) {
@@ -11,10 +9,8 @@ public class StatsService {
         return sum;
     }
 
-    public int averageOfSales(int[] sales) {
-        StatsService service = new StatsService();
-        int average = service.sumOfSales(sales) / sales.length;
-        return average;
+    public double averageOfSales(int[] sales) {
+        return sumOfSales(sales)/sales.length;
     }
 
     public int findIndexOfMaxOfSales(int[] sales) {
@@ -48,7 +44,7 @@ public class StatsService {
     public int amountOfMonthBelowAverage(int[] sales) {
         int countOfMonth = 0;
         int countOfBelowAverage = 0;
-        int average = averageOfSales(sales);
+        double average = averageOfSales(sales);
         for (int sale : sales) {
             if (sale < average) {
                 countOfMonth++;
@@ -61,7 +57,7 @@ public class StatsService {
     public int amountOfMonthHighAverage(int[] sales) {
         int countOfMonth = 0;
         int countOfHighAverage = 0;
-        int average = averageOfSales(sales);
+        double average = averageOfSales(sales);
         for (int sale : sales) {
             if (sale > average) {
                 countOfMonth++;

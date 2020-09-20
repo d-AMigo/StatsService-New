@@ -19,8 +19,8 @@ class StatsServiceTest {
     void averageOfSales() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 15;
-        int actual = service.averageOfSales(sales);
+        double expected = 15;
+        double actual = service.averageOfSales(sales);
         assertEquals(expected, actual);
     }
 
