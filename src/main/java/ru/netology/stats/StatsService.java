@@ -10,7 +10,7 @@ public class StatsService {
     }
 
     public double averageOfSales(int[] sales) {
-        return sumOfSales(sales)/sales.length;
+        return sumOfSales(sales) / (double) sales.length;
     }
 
     public int findIndexOfMaxOfSales(int[] sales) {
